@@ -74,7 +74,7 @@ thread_counts = [color_count(color) for color in colors]
 # === MARK: Bar Chart
 
 # Plotting the bar chart
-plt.bar(colors, thread_counts, color='green')
+plt.bar(colors, thread_counts, color='skyblue')
 
 # Adding labels and title
 plt.xlabel('Thread Color')
