@@ -1,5 +1,7 @@
 # Thread Shed Sales Analysis
 
+<img src="./thread_sales.png" alt="Thread Shed Sales Analysis" width="600" height="400">
+
 ## Project Overview
 
 This project involves parsing and analyzing sales data from a sewing supply store called "Thread Shed." The data is stored in a single, complex string that includes customer names, sales amounts, thread colors, and sale dates. The goal is to clean and organize this data into separate lists for customers, sales, and thread colors, calculate the total sales for the day, and determine the number of threads sold for each color.
