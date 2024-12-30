@@ -68,15 +68,13 @@ colors = list(set(thread_sold_split))
 for color in colors:
     print(f"Thread Shed sold {color_count(color)} threads of {color} thread today.")
 
-print(total_sales)
+
+thread_counts = [color_count(color) for color in colors]
 
 # === MARK: Bar Chart
-# Assuming you have the following data prepared:
-colors = ['red', 'blue', 'green', 'yellow', 'black']  # List of thread colors
-thread_counts = [15, 20, 10, 8, 5]  # Corresponding counts of threads sold
 
 # Plotting the bar chart
-plt.bar(colors, thread_counts, color='skyblue')
+plt.bar(colors, thread_counts, color='green')
 
 # Adding labels and title
 plt.xlabel('Thread Color')
@@ -85,6 +83,7 @@ plt.title('Thread Sales by Color')
 
 # Save the figure to a file (e.g., 'thread_sales.png')
 plt.savefig('thread_sales.png')
+print("Saved to image! 📷")
 
 # Display the plot (optional)
 plt.show()
