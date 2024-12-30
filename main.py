@@ -1,6 +1,10 @@
+import matplotlib.pyplot as plt
+
+# === MARK: Reading from a txt file
 # Reading from a txt file
 daily_sales = open('daily-sales.txt', 'r').read()
 
+# === MARK: Cleaning the data
 # Replace the artifact ';,;' with a unique character '🌉' to avoid splitting transaction data
 daily_sales_replaced = daily_sales.replace(';,;', '🌉')
 # Split the string into individual transactions using ',' as the delimiter
@@ -65,3 +69,22 @@ for color in colors:
     print(f"Thread Shed sold {color_count(color)} threads of {color} thread today.")
 
 print(total_sales)
+
+# === MARK: Bar Chart
+# Assuming you have the following data prepared:
+colors = ['red', 'blue', 'green', 'yellow', 'black']  # List of thread colors
+thread_counts = [15, 20, 10, 8, 5]  # Corresponding counts of threads sold
+
+# Plotting the bar chart
+plt.bar(colors, thread_counts, color='skyblue')
+
+# Adding labels and title
+plt.xlabel('Thread Color')
+plt.ylabel('Number of Threads Sold')
+plt.title('Thread Sales by Color')
+
+# Save the figure to a file (e.g., 'thread_sales.png')
+plt.savefig('thread_sales.png')
+
+# Display the plot (optional)
+plt.show()
