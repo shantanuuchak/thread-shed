@@ -12,10 +12,51 @@ This project involves parsing and analyzing sales data from a sewing supply stor
 4. **Sales Calculation**: Calculate the total sales amount for the day.
 5. **Thread Color Analysis**: Count the number of threads sold for each color.
 
-## How to Run
+## Usage
 
-1. Ensure Python is installed on your system.
-2. Run the script using a Python interpreter to see the output of total sales and thread color counts.
+1. **Prepare the data:**
+
+- Create a text file named `daily-sales.txt` containing your sales data in the following format:
+
+```
+customer_name;color_1;color_2;color_3;...;sales_amount
+...
+```
+
+- Replace `;` with `;,;` for multiple colors in a single transaction.
+- Example:
+
+```
+John Doe;red;blue;,;;$15.00
+Jane Smith;green;,;;$10.00
+David Lee;white;black;,;;$20.00
+```
+
+2. **Run the script:**
+
+- Execute the Python script from your terminal:
+
+```bash
+python thread_sales_analysis.py
+```
+
+3. **View the results:**
+
+- The script will print the total sales amount to the console.
+- A bar chart will be generated and saved as `thread_sales.png` in the same directory as the script.
+
+## Visualization
+
+The generated `thread_sales.png` will display:
+
+- **X-axis:** Thread colors
+- **Y-axis:** Number of threads sold for each color
+- **Bar chart:** Visual representation of thread sales by color
+
+**Note:** This assumes you have matplotlib installed. If not, install it using:
+
+```bash
+pip install matplotlib
 
 ## Learning Outcomes
 
@@ -24,3 +65,4 @@ This project involves parsing and analyzing sales data from a sewing supply stor
 - Develop skills in cleaning and processing raw data for analysis.
 
 This project is a practical exercise in handling and analyzing real-world data using Python, focusing on string operations and list management.
+```
